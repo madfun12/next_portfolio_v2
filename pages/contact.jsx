@@ -26,9 +26,27 @@ export default function Contact() {
         }));
     };
 
-    const onSubmit = async () => {
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        setState((prev) => ({
+            ...prev,
+            loading: true,
+        }));
         if (values.name && values.email && values.subject) {
-            await sendContactForm(values);
+            try {
+                await sendContactForm(values);
+                setState({
+                    loading: false,
+                    success: true,
+                    values: initValues,
+                });
+            } catch (error) {
+                setState({
+                    loading: false,
+                    error: true,
+                    values: initValues,
+                });
+            }
         }
     };
 
@@ -70,7 +88,20 @@ export default function Contact() {
                     value={values.message}
                     onChange={handleFormChange}
                 />
-                <button onClick={onSubmit}>Submit</button>
+                <button onClick={onSubmit}>
+                    {state.loading ? "Patience..." : "Submit"}
+                </button>
+                {state.success && (
+                    <p className="form-success">
+                        Hell yeah, it worked! I'll be in touch soon.
+                    </p>
+                )}
+                {state.error && (
+                    <p className="form-failure">
+                        Ah, shit. Something's broken. Email me at
+                        madfun12@gmail.com while I fix it.
+                    </p>
+                )}
             </form>
         </TopPage>
     );
