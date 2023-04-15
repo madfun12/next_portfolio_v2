@@ -1,0 +1,28 @@
+.about-page {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 320px;
+        margin: auto;
+        border-radius: 10px;
+        @include mobile {
+            width: 80%;
+        }
+    }
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .row {
+        .pfp {
+            margin: 0;
+            margin-right: 20px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

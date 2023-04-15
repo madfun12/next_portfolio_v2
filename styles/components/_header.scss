@@ -1,0 +1,150 @@
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    max-width: 1920px;
+    margin: auto;
+    .name-holder {
+        display: flex;
+
+        .name-logo {
+            margin: 10px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #777777;
+            position: relative;
+            transition: 250ms;
+            padding-right: 20px;
+            line-height: 32px;
+            &::after {
+                display: block;
+                position: absolute;
+                right: 7px;
+                bottom: 5px;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: #777;
+                transition: 250ms;
+                border-radius: 50%;
+            }
+            &:hover,
+            &:focus-visible {
+                color: #fff;
+                &::after {
+                    background-color: #4297ff;
+                }
+            }
+        }
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        li {
+            a {
+                font-size: 14px;
+                color: #777777;
+                transition: 250ms;
+                padding: 10px 10px;
+
+                &:hover,
+                &:focus-visible {
+                    color: #4297ff;
+                }
+            }
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    .kahuna-burger {
+        @include desktop {
+            display: none;
+        }
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        margin: 10px;
+        z-index: 11;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .patty {
+            width: 30px;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 0px;
+            position: relative;
+            transition: 250ms;
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: inherit;
+                height: inherit;
+                background-color: #fff;
+                border-radius: inherit;
+                transform: translateY(-10px);
+                transition: 250ms;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: inherit;
+                height: inherit;
+                background-color: #fff;
+                border-radius: inherit;
+                transform: translateY(10px);
+                transition: 250ms;
+            }
+        }
+        &.active {
+            .patty {
+                background-color: transparent;
+                &::before {
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .mobile-menu {
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        z-index: 10;
+        background-color: #202831;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 250ms;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            min-height: 200px;
+            li {
+                height: fit-content;
+                a {
+                    color: #fff;
+                    font-size: 24px;
+                    padding: 20px 10px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

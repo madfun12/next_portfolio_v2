@@ -1,0 +1,36 @@
+.blogs-header {
+    text-align: center;
+    font-weight: 600;
+    margin: 100px 0 50px;
+}
+.blogs-container {
+    max-width: 80em;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+
+    .blog-card {
+        width: fit-content;
+        padding: 10px;
+        border: 1px solid #fff;
+        background-color: #fff;
+        border-radius: 15px;
+        img {
+            width: 320px;
+            border-radius: 10px;
+        }
+        h3 {
+            display: flex;
+            font-size: 26px;
+            max-width: 320px;
+            line-height: 1.2;
+            color: #323232;
+            .material-symbols-outlined {
+                margin-left: 5px;
+            }
+        }
+        p {
+            color: #323232;
+        }
+    }
+}
