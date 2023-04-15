@@ -21,9 +21,7 @@ export default function About() {
                         content! I'm an unapologetic emoji user 💯 and I'm here
                         to share my learning process. This site is just a
                         collection of different blog posts and projects that I'm
-                        working on at any given moment. If you really want to
-                        learn more about me, hopefully I'll be putting some more
-                        content below for you to do so.
+                        working on at any given moment.
                     </p>
                 </div>
             </div>

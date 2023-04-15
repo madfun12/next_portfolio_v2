@@ -22,14 +22,10 @@ export default function Home({ posts }) {
                 <h1>Hey! I'm Madison.</h1>
                 <h2>I'm a programmer</h2>
                 <p>
-                    As a self taught programmer, I find that I'm constantly on
-                    the search for something new to teach myself. I'm eager to
-                    tackle complex challenges, and I'm always working towards
-                    mastering the intersection of math and computer science! I'm
-                    trying my hand at machine learning, and want to share the
-                    process with you through concise posts with clear
-                    explanations and practical tips. So join me and let's learn
-                    together!
+                    I've got a lot of projects in mind and I'm going to start
+                    building them and posting them here. Machine learning,
+                    back-end development, a11y design, and all sorts of other
+                    topics interest me.
                 </p>
             </div>
         </TopPage>
