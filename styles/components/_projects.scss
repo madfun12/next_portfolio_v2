@@ -1,0 +1,31 @@
+.project-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        display: block;
+        width: fit-content;
+        .project {
+            background-color: white;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 14px;
+            color: #323232;
+            img {
+                border-radius: 10px;
+            }
+            h4 {
+                display: flex;
+                align-items: center;
+                font-size: 22px;
+                span {
+                    margin-left: 5px;
+                }
+            }
+
+            img {
+                max-width: 250px;
+            }
+        }
+    }
+}

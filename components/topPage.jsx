@@ -47,6 +47,9 @@ export default function TopPage(props) {
                         <Link href="/about">About</Link>
                     </li>
                     <li>
+                        <Link href="/projects">Projects</Link>
+                    </li>
+                    <li>
                         <Link href="/blog">Blog</Link>
                     </li>
                     <li>
@@ -66,6 +69,14 @@ export default function TopPage(props) {
                         <li>
                             <Link href="/about" tabIndex={!isOpen ? "-1" : ""}>
                                 About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/projects"
+                                tabIndex={!isOpen ? "-1" : ""}
+                            >
+                                Projects
                             </Link>
                         </li>
                         <li>
